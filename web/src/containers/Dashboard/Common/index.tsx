@@ -4,11 +4,15 @@ import { SearchAddWrapper } from "./styles";
 import { Button } from "../../../components/Button";
 import { InputSearch } from "../../../components/InputSearch";
 
-const SearchAdd = (): JSX.Element => {
+export interface SearchAddProps {
+  onClick?: () => void;
+}
+
+const SearchAdd: React.FC<SearchAddProps> = ({ onClick }): JSX.Element => {
   return (
     <SearchAddWrapper>
       <InputSearch name="search" label="Pesquisar" />
-      <Button button="button" name="add" onClick={() => console.log("click")}>
+      <Button button="button" name="add" onClick={onClick}>
         + Novo
       </Button>
     </SearchAddWrapper>

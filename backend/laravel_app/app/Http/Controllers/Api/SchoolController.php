@@ -15,7 +15,7 @@ class SchoolController extends Controller
       'address' => ['required'],
    ]);
 
-    $schools = new Schools;  
+    $schools = new Schools;
     $schools->name_school =  $request->name_school;
     $schools->address =  $request->address;
     $schools->user_id =  auth()->user()->id;

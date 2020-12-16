@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/router";
 
 import { SearchAdd } from "../Common";
 
@@ -9,11 +10,17 @@ import { useAuth } from "../../../contexts/auth";
 
 const Students = (): JSX.Element => {
   const { user } = useAuth();
+  const router = useRouter();
+
   const students = ["Aluno 1", "Aluno 2"];
+
+  const goRegister = () => {
+    router.push("students/register");
+  };
 
   return (
     <StudentWrapper>
-      <SearchAdd />
+      <SearchAdd onClick={goRegister} />
 
       <List
         title="Nome do Aluno"

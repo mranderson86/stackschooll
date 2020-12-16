@@ -20,6 +20,7 @@ import { PasswordField } from "../../components/PasswordField";
 import { RadioGroup } from "../../components/RadioGroup";
 import { Button } from "../../components/Button";
 import { BackTo } from "../../components/BackTo";
+import { Options } from "../../components/Options";
 
 import { Profile } from "../../model/profile";
 import { api } from "../../services/api";
@@ -154,6 +155,21 @@ const Register: React.FC = (): JSX.Element => {
                 }
               }}
             />
+          </fieldset>
+
+          <fieldset>
+            {userProfile.profile === "responsavel" && (
+              <>
+                <Label>Selecione a escola.</Label>
+                <Options
+                  items={[
+                    { id: 1, option: "Escola 1" },
+                    { id: 2, option: "Escola 2" },
+                    { id: 3, option: "Escola 3" }
+                  ]}
+                />
+              </>
+            )}
           </fieldset>
 
           <Button button="submit" name="register">
