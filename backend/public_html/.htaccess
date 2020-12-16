@@ -1,6 +1,6 @@
 ##### LOCAWEB - NAO REMOVER #####
-AddHandler php73-script .php
-suPHP_ConfigPath /home/stackschool1/
+#AddHandler php73-script .php
+#suPHP_ConfigPath /home/stackschool1/
 ##### LOCAWEB - NAO REMOVER #####
 
 <IfModule mod_rewrite.c>
