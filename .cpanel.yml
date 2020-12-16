@@ -1,6 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/mrander8/public_html
-    - /bin/cp stackschooll/backend/laravel_app
-    - /bin/cp stackschooll/backend/public_html
+    - export DEPLOYPATH=/home/mrander8/public_html/
+    - /bin/cp -R * $DEPLOYPATH
