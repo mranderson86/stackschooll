@@ -3,3 +3,4 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/mrander8/
     - /bin/cp -R backend/public_html/  $DEPLOYPATH
+    - /bin/cp -R backend/laravel_app/  $DEPLOYPATH
