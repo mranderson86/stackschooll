@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/mrander8/public_html/
-    - /bin/cp -R backend/public_html/ * $DEPLOYPATH
+    - export DEPLOYPATH=/home/mrander8/
+    - /bin/cp -R backend/public_html/  $DEPLOYPATH
